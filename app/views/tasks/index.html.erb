@@ -1,0 +1,32 @@
+<div>
+  <button type="button" align="center"><%= link_to t(:createtask), 'tasks/new'%></button>
+  <% @tasks.each do |task| %>
+      <style>
+        table {
+          border-style: solid; /* Стиль линии вокруг параграфа */
+          padding: 5px; /* Поля вокруг текста */
+        }
+      </style>
+      <div>
+        <table  align="center">
+          <tr>
+            <th><%= t :name %></th>
+            <th><%= t :description %></th>
+            <th><%= t :importance %></th>
+            <th><%= t :expiry %></th>
+            <th><%= t :status %></th>
+            <th><%= t :status %></th>
+          </tr>
+          <tr>
+            <td><%= task.name %></td>
+            <td><%= task.description %> </td>
+            <td><%= task.importance %> </td>
+            <td><%= task.expiry %></td>
+            <td><%= task.status%></td>
+            <td><%= link_to t(:update), edit_task_path(id: task.id)%> </td>
+            <td><%= link_to t(:delete), delete_task_path(id: task.id), method: :delete %></td>
+          </tr>
+        </table>
+      </div>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<%= form_for :task do |f|-%>
+    <%= f.text_field :name, placeholder: 'name' %>      <p><%= t :name %></p><br>
+    <%= f.text_field :description, placeholder: 'description' %><p><%= t :description %></p><br>
+    <%= f.text_field :importance, placeholder: 'importance' %><p><%= t :importance %></p><br>
+    <%= f.date_select :expiry, order: [:day, :month, :year] %><p><%= t :expiry %></p><br>
+    <%= f.submit t(:save) %><br>
+    <%= link_to t(:back), '/'%>
+<% end %>

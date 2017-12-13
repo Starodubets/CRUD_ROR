@@ -1,0 +1,12 @@
+<%= form_for @task, url: update_task_path(@task.id.to_s) do |f| -%>
+    <%= f.hidden_field :id, value: @task.id %><br>
+    <%= f.text_field :name, value: @task.name %><br>
+    <%= f.text_field :description, value: @task.description %><br>
+    <%= f.text_field :importance, value: @task.importance %><br>
+    <%= f.text_field :expiry, value: @task.expiry, id:"datepicker" %><br>
+    <%= f.select :status, ['true', 'false'], value: @task.status %><br>
+
+    <%= f.submit t :save %>
+    <br>
+    <%= link_to t(:back), '/'%>
+<% end %>

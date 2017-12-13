@@ -1,0 +1,13 @@
+ru:
+  hello: "Привет, мир!"
+  name: "Название"
+  description: "Описание"
+  importance: "Важность"
+  expiry: "Дата"
+  update: "Изменить"
+  delete: "Удалить"
+  createtask: "Создать"
+  singout: "Выйти"
+  save: "Сохранить"
+  status: "Статус"
+  back: "Назад"
